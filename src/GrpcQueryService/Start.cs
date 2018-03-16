@@ -2,7 +2,7 @@
 
 using Grpc.Core;
 
-namespace LuckQueryService
+namespace GrpcService
 {
     public class Start
     {
@@ -12,7 +12,7 @@ namespace LuckQueryService
 
             var server = new Server
             {
-                Services = { Queries.Contract.protos.GrpcQueryService.BindService(new LuckQueryService.Services.LuckQueryService()) },
+                Services = { Grpc.Contract.GrpcService.BindService(new GrpcService.Services.LuckQueryService()) },
                 Ports = { new ServerPort("localhost", port, ServerCredentials.Insecure) }
             };
             server.Start();

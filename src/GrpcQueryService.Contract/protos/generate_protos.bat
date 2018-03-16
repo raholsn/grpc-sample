@@ -22,6 +22,6 @@ cd /d %~dp0
 set PROTOC=%UserProfile%\.nuget\packages\Google.Protobuf.Tools\3.5.1\tools\windows_x64\protoc.exe
 set PLUGIN=%UserProfile%\.nuget\packages\Grpc.Tools\1.10.0\tools\windows_x64\grpc_csharp_plugin.exe
 
-%PROTOC% -I../protos --csharp_out ./  ../protos/LuckQueries.proto --grpc_out ./ --plugin=protoc-gen-grpc=%PLUGIN%
+%PROTOC% -I../protos --csharp_out ./  ../protos/Grpc.proto --grpc_out ./ --plugin=protoc-gen-grpc=%PLUGIN%
 
 endlocal
