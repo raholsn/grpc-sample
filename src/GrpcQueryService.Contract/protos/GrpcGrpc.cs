@@ -34,25 +34,25 @@ namespace Grpc.Contract {
         __Marshaller_GrpcRequests,
         __Marshaller_GrpcResponses);
 
-    static readonly grpc::Method<global::Grpc.Contract.GrpcRequest, global::Grpc.Contract.GrpcResponse> __Method_GetCustomerWithBidirectionalStream = new grpc::Method<global::Grpc.Contract.GrpcRequest, global::Grpc.Contract.GrpcResponse>(
+    static readonly grpc::Method<global::Grpc.Contract.GrpcRequest, global::Grpc.Contract.GrpcResponse> __Method_GetCustomersWithBidirectionalStream = new grpc::Method<global::Grpc.Contract.GrpcRequest, global::Grpc.Contract.GrpcResponse>(
         grpc::MethodType.DuplexStreaming,
         __ServiceName,
-        "GetCustomerWithBidirectionalStream",
+        "GetCustomersWithBidirectionalStream",
         __Marshaller_GrpcRequest,
         __Marshaller_GrpcResponse);
 
-    static readonly grpc::Method<global::Grpc.Contract.GrpcRequest, global::Grpc.Contract.GrpcResponse> __Method_GetCustomerWithClientStream = new grpc::Method<global::Grpc.Contract.GrpcRequest, global::Grpc.Contract.GrpcResponse>(
+    static readonly grpc::Method<global::Grpc.Contract.GrpcRequest, global::Grpc.Contract.GrpcResponses> __Method_GetCustomersWithClientStream = new grpc::Method<global::Grpc.Contract.GrpcRequest, global::Grpc.Contract.GrpcResponses>(
         grpc::MethodType.ClientStreaming,
         __ServiceName,
-        "GetCustomerWithClientStream",
+        "GetCustomersWithClientStream",
         __Marshaller_GrpcRequest,
-        __Marshaller_GrpcResponse);
+        __Marshaller_GrpcResponses);
 
-    static readonly grpc::Method<global::Grpc.Contract.GrpcRequest, global::Grpc.Contract.GrpcResponse> __Method_GetCustomerWithServerStream = new grpc::Method<global::Grpc.Contract.GrpcRequest, global::Grpc.Contract.GrpcResponse>(
+    static readonly grpc::Method<global::Grpc.Contract.GrpcRequests, global::Grpc.Contract.GrpcResponse> __Method_GetCustomersWithServerStream = new grpc::Method<global::Grpc.Contract.GrpcRequests, global::Grpc.Contract.GrpcResponse>(
         grpc::MethodType.ServerStreaming,
         __ServiceName,
-        "GetCustomerWithServerStream",
-        __Marshaller_GrpcRequest,
+        "GetCustomersWithServerStream",
+        __Marshaller_GrpcRequests,
         __Marshaller_GrpcResponse);
 
     /// <summary>Service descriptor</summary>
@@ -74,17 +74,17 @@ namespace Grpc.Contract {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task GetCustomerWithBidirectionalStream(grpc::IAsyncStreamReader<global::Grpc.Contract.GrpcRequest> requestStream, grpc::IServerStreamWriter<global::Grpc.Contract.GrpcResponse> responseStream, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task GetCustomersWithBidirectionalStream(grpc::IAsyncStreamReader<global::Grpc.Contract.GrpcRequest> requestStream, grpc::IServerStreamWriter<global::Grpc.Contract.GrpcResponse> responseStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::Grpc.Contract.GrpcResponse> GetCustomerWithClientStream(grpc::IAsyncStreamReader<global::Grpc.Contract.GrpcRequest> requestStream, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Grpc.Contract.GrpcResponses> GetCustomersWithClientStream(grpc::IAsyncStreamReader<global::Grpc.Contract.GrpcRequest> requestStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task GetCustomerWithServerStream(global::Grpc.Contract.GrpcRequest request, grpc::IServerStreamWriter<global::Grpc.Contract.GrpcResponse> responseStream, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task GetCustomersWithServerStream(global::Grpc.Contract.GrpcRequests request, grpc::IServerStreamWriter<global::Grpc.Contract.GrpcResponse> responseStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -146,29 +146,29 @@ namespace Grpc.Contract {
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetCustomers, null, options, request);
       }
-      public virtual grpc::AsyncDuplexStreamingCall<global::Grpc.Contract.GrpcRequest, global::Grpc.Contract.GrpcResponse> GetCustomerWithBidirectionalStream(grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncDuplexStreamingCall<global::Grpc.Contract.GrpcRequest, global::Grpc.Contract.GrpcResponse> GetCustomersWithBidirectionalStream(grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return GetCustomerWithBidirectionalStream(new grpc::CallOptions(headers, deadline, cancellationToken));
+        return GetCustomersWithBidirectionalStream(new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncDuplexStreamingCall<global::Grpc.Contract.GrpcRequest, global::Grpc.Contract.GrpcResponse> GetCustomerWithBidirectionalStream(grpc::CallOptions options)
+      public virtual grpc::AsyncDuplexStreamingCall<global::Grpc.Contract.GrpcRequest, global::Grpc.Contract.GrpcResponse> GetCustomersWithBidirectionalStream(grpc::CallOptions options)
       {
-        return CallInvoker.AsyncDuplexStreamingCall(__Method_GetCustomerWithBidirectionalStream, null, options);
+        return CallInvoker.AsyncDuplexStreamingCall(__Method_GetCustomersWithBidirectionalStream, null, options);
       }
-      public virtual grpc::AsyncClientStreamingCall<global::Grpc.Contract.GrpcRequest, global::Grpc.Contract.GrpcResponse> GetCustomerWithClientStream(grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncClientStreamingCall<global::Grpc.Contract.GrpcRequest, global::Grpc.Contract.GrpcResponses> GetCustomersWithClientStream(grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return GetCustomerWithClientStream(new grpc::CallOptions(headers, deadline, cancellationToken));
+        return GetCustomersWithClientStream(new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncClientStreamingCall<global::Grpc.Contract.GrpcRequest, global::Grpc.Contract.GrpcResponse> GetCustomerWithClientStream(grpc::CallOptions options)
+      public virtual grpc::AsyncClientStreamingCall<global::Grpc.Contract.GrpcRequest, global::Grpc.Contract.GrpcResponses> GetCustomersWithClientStream(grpc::CallOptions options)
       {
-        return CallInvoker.AsyncClientStreamingCall(__Method_GetCustomerWithClientStream, null, options);
+        return CallInvoker.AsyncClientStreamingCall(__Method_GetCustomersWithClientStream, null, options);
       }
-      public virtual grpc::AsyncServerStreamingCall<global::Grpc.Contract.GrpcResponse> GetCustomerWithServerStream(global::Grpc.Contract.GrpcRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncServerStreamingCall<global::Grpc.Contract.GrpcResponse> GetCustomersWithServerStream(global::Grpc.Contract.GrpcRequests request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return GetCustomerWithServerStream(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return GetCustomersWithServerStream(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncServerStreamingCall<global::Grpc.Contract.GrpcResponse> GetCustomerWithServerStream(global::Grpc.Contract.GrpcRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncServerStreamingCall<global::Grpc.Contract.GrpcResponse> GetCustomersWithServerStream(global::Grpc.Contract.GrpcRequests request, grpc::CallOptions options)
       {
-        return CallInvoker.AsyncServerStreamingCall(__Method_GetCustomerWithServerStream, null, options, request);
+        return CallInvoker.AsyncServerStreamingCall(__Method_GetCustomersWithServerStream, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override GrpcServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -184,9 +184,9 @@ namespace Grpc.Contract {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_GetCustomer, serviceImpl.GetCustomer)
           .AddMethod(__Method_GetCustomers, serviceImpl.GetCustomers)
-          .AddMethod(__Method_GetCustomerWithBidirectionalStream, serviceImpl.GetCustomerWithBidirectionalStream)
-          .AddMethod(__Method_GetCustomerWithClientStream, serviceImpl.GetCustomerWithClientStream)
-          .AddMethod(__Method_GetCustomerWithServerStream, serviceImpl.GetCustomerWithServerStream).Build();
+          .AddMethod(__Method_GetCustomersWithBidirectionalStream, serviceImpl.GetCustomersWithBidirectionalStream)
+          .AddMethod(__Method_GetCustomersWithClientStream, serviceImpl.GetCustomersWithClientStream)
+          .AddMethod(__Method_GetCustomersWithServerStream, serviceImpl.GetCustomersWithServerStream).Build();
     }
 
   }

@@ -4,15 +4,15 @@ using Grpc.Core;
 
 namespace GrpcService
 {
-    public class Start
+    public static class Start
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             int port = 54321;
 
             var server = new Server
             {
-                Services = { Grpc.Contract.GrpcService.BindService(new GrpcService.Services.LuckQueryService()) },
+                Services = { Grpc.Contract.GrpcService.BindService(new GrpcService.Services.GrpcService()) },
                 Ports = { new ServerPort("localhost", port, ServerCredentials.Insecure) }
             };
             server.Start();

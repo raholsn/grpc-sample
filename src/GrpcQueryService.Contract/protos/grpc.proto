@@ -6,9 +6,9 @@ option csharp_namespace = "Grpc.Contract";
 service GrpcService {
     rpc GetCustomer(GrpcRequest) returns (GrpcResponse);
 	rpc GetCustomers(GrpcRequests)  returns (GrpcResponses);
-	rpc GetCustomerWithBidirectionalStream(stream  GrpcRequest) returns (stream GrpcResponse);
-	rpc GetCustomerWithClientStream(stream  GrpcRequest) returns (GrpcResponse);
-	rpc GetCustomerWithServerStream(GrpcRequest)  returns (stream GrpcResponse);
+	rpc GetCustomersWithBidirectionalStream(stream  GrpcRequest) returns (stream GrpcResponse);
+	rpc GetCustomersWithClientStream(stream  GrpcRequest) returns (GrpcResponses);
+	rpc GetCustomersWithServerStream(GrpcRequests)  returns (stream GrpcResponse);
 }
 
 message GrpcRequests{
@@ -16,7 +16,7 @@ message GrpcRequests{
 }
 
 message GrpcRequest{
-	int32 collector = 1;
+	int32 value = 1;
 }
 
 message GrpcResponses{
@@ -24,5 +24,5 @@ message GrpcResponses{
 }
 
 message GrpcResponse {
-	int32 collector = 1;
+	int32 value = 1;
 }

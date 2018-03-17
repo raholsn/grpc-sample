@@ -25,27 +25,27 @@ namespace Grpc.Contract {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CgpHcnBjLnByb3RvEglHcnBjUHJvdG8iNwoMR3JwY1JlcXVlc3RzEicKB3Jl",
-            "cXVlc3QYASADKAsyFi5HcnBjUHJvdG8uR3JwY1JlcXVlc3QiIAoLR3JwY1Jl",
-            "cXVlc3QSEQoJY29sbGVjdG9yGAEgASgFIjoKDUdycGNSZXNwb25zZXMSKQoI",
-            "cmVzcG9uc2UYASADKAsyFy5HcnBjUHJvdG8uR3JwY1Jlc3BvbnNlIiEKDEdy",
-            "cGNSZXNwb25zZRIRCgljb2xsZWN0b3IYASABKAUyjwMKC0dycGNTZXJ2aWNl",
-            "Ej4KC0dldEN1c3RvbWVyEhYuR3JwY1Byb3RvLkdycGNSZXF1ZXN0GhcuR3Jw",
-            "Y1Byb3RvLkdycGNSZXNwb25zZRJBCgxHZXRDdXN0b21lcnMSFy5HcnBjUHJv",
-            "dG8uR3JwY1JlcXVlc3RzGhguR3JwY1Byb3RvLkdycGNSZXNwb25zZXMSWQoi",
-            "R2V0Q3VzdG9tZXJXaXRoQmlkaXJlY3Rpb25hbFN0cmVhbRIWLkdycGNQcm90",
-            "by5HcnBjUmVxdWVzdBoXLkdycGNQcm90by5HcnBjUmVzcG9uc2UoATABElAK",
-            "G0dldEN1c3RvbWVyV2l0aENsaWVudFN0cmVhbRIWLkdycGNQcm90by5HcnBj",
-            "UmVxdWVzdBoXLkdycGNQcm90by5HcnBjUmVzcG9uc2UoARJQChtHZXRDdXN0",
-            "b21lcldpdGhTZXJ2ZXJTdHJlYW0SFi5HcnBjUHJvdG8uR3JwY1JlcXVlc3Qa",
-            "Fy5HcnBjUHJvdG8uR3JwY1Jlc3BvbnNlMAFCEKoCDUdycGMuQ29udHJhY3Ri",
-            "BnByb3RvMw=="));
+            "cXVlc3QYASADKAsyFi5HcnBjUHJvdG8uR3JwY1JlcXVlc3QiHAoLR3JwY1Jl",
+            "cXVlc3QSDQoFdmFsdWUYASABKAUiOgoNR3JwY1Jlc3BvbnNlcxIpCghyZXNw",
+            "b25zZRgBIAMoCzIXLkdycGNQcm90by5HcnBjUmVzcG9uc2UiHQoMR3JwY1Jl",
+            "c3BvbnNlEg0KBXZhbHVlGAEgASgFMpQDCgtHcnBjU2VydmljZRI+CgtHZXRD",
+            "dXN0b21lchIWLkdycGNQcm90by5HcnBjUmVxdWVzdBoXLkdycGNQcm90by5H",
+            "cnBjUmVzcG9uc2USQQoMR2V0Q3VzdG9tZXJzEhcuR3JwY1Byb3RvLkdycGNS",
+            "ZXF1ZXN0cxoYLkdycGNQcm90by5HcnBjUmVzcG9uc2VzEloKI0dldEN1c3Rv",
+            "bWVyc1dpdGhCaWRpcmVjdGlvbmFsU3RyZWFtEhYuR3JwY1Byb3RvLkdycGNS",
+            "ZXF1ZXN0GhcuR3JwY1Byb3RvLkdycGNSZXNwb25zZSgBMAESUgocR2V0Q3Vz",
+            "dG9tZXJzV2l0aENsaWVudFN0cmVhbRIWLkdycGNQcm90by5HcnBjUmVxdWVz",
+            "dBoYLkdycGNQcm90by5HcnBjUmVzcG9uc2VzKAESUgocR2V0Q3VzdG9tZXJz",
+            "V2l0aFNlcnZlclN0cmVhbRIXLkdycGNQcm90by5HcnBjUmVxdWVzdHMaFy5H",
+            "cnBjUHJvdG8uR3JwY1Jlc3BvbnNlMAFCEKoCDUdycGMuQ29udHJhY3RiBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.Contract.GrpcRequests), global::Grpc.Contract.GrpcRequests.Parser, new[]{ "Request" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.Contract.GrpcRequest), global::Grpc.Contract.GrpcRequest.Parser, new[]{ "Collector" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.Contract.GrpcRequest), global::Grpc.Contract.GrpcRequest.Parser, new[]{ "Value" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.Contract.GrpcResponses), global::Grpc.Contract.GrpcResponses.Parser, new[]{ "Response" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.Contract.GrpcResponse), global::Grpc.Contract.GrpcResponse.Parser, new[]{ "Collector" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.Contract.GrpcResponse), global::Grpc.Contract.GrpcResponse.Parser, new[]{ "Value" }, null, null, null)
           }));
     }
     #endregion
@@ -198,7 +198,7 @@ namespace Grpc.Contract {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public GrpcRequest(GrpcRequest other) : this() {
-      collector_ = other.collector_;
+      value_ = other.value_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -207,14 +207,14 @@ namespace Grpc.Contract {
       return new GrpcRequest(this);
     }
 
-    /// <summary>Field number for the "collector" field.</summary>
-    public const int CollectorFieldNumber = 1;
-    private int collector_;
+    /// <summary>Field number for the "value" field.</summary>
+    public const int ValueFieldNumber = 1;
+    private int value_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int Collector {
-      get { return collector_; }
+    public int Value {
+      get { return value_; }
       set {
-        collector_ = value;
+        value_ = value;
       }
     }
 
@@ -231,14 +231,14 @@ namespace Grpc.Contract {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Collector != other.Collector) return false;
+      if (Value != other.Value) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Collector != 0) hash ^= Collector.GetHashCode();
+      if (Value != 0) hash ^= Value.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -252,9 +252,9 @@ namespace Grpc.Contract {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Collector != 0) {
+      if (Value != 0) {
         output.WriteRawTag(8);
-        output.WriteInt32(Collector);
+        output.WriteInt32(Value);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -264,8 +264,8 @@ namespace Grpc.Contract {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Collector != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Collector);
+      if (Value != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Value);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -278,8 +278,8 @@ namespace Grpc.Contract {
       if (other == null) {
         return;
       }
-      if (other.Collector != 0) {
-        Collector = other.Collector;
+      if (other.Value != 0) {
+        Value = other.Value;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -293,7 +293,7 @@ namespace Grpc.Contract {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            Collector = input.ReadInt32();
+            Value = input.ReadInt32();
             break;
           }
         }
@@ -448,7 +448,7 @@ namespace Grpc.Contract {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public GrpcResponse(GrpcResponse other) : this() {
-      collector_ = other.collector_;
+      value_ = other.value_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -457,14 +457,14 @@ namespace Grpc.Contract {
       return new GrpcResponse(this);
     }
 
-    /// <summary>Field number for the "collector" field.</summary>
-    public const int CollectorFieldNumber = 1;
-    private int collector_;
+    /// <summary>Field number for the "value" field.</summary>
+    public const int ValueFieldNumber = 1;
+    private int value_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int Collector {
-      get { return collector_; }
+    public int Value {
+      get { return value_; }
       set {
-        collector_ = value;
+        value_ = value;
       }
     }
 
@@ -481,14 +481,14 @@ namespace Grpc.Contract {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Collector != other.Collector) return false;
+      if (Value != other.Value) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Collector != 0) hash ^= Collector.GetHashCode();
+      if (Value != 0) hash ^= Value.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -502,9 +502,9 @@ namespace Grpc.Contract {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Collector != 0) {
+      if (Value != 0) {
         output.WriteRawTag(8);
-        output.WriteInt32(Collector);
+        output.WriteInt32(Value);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -514,8 +514,8 @@ namespace Grpc.Contract {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Collector != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Collector);
+      if (Value != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Value);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -528,8 +528,8 @@ namespace Grpc.Contract {
       if (other == null) {
         return;
       }
-      if (other.Collector != 0) {
-        Collector = other.Collector;
+      if (other.Value != 0) {
+        Value = other.Value;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -543,7 +543,7 @@ namespace Grpc.Contract {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            Collector = input.ReadInt32();
+            Value = input.ReadInt32();
             break;
           }
         }
