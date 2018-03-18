@@ -1,3 +1,3 @@
 # Grpc-sample
 
-Comparing performance on grpc concepts
+Testing out grpc features and comparing performance of grpc vs rest & wcf
