@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 using Grpc.Core;
 
@@ -8,12 +9,13 @@ namespace GrpcService
     {
         public static void Main(string[] args)
         {
-            int port = 54321;
+            var host = "localhost";
+            var port = 54321;
 
             var server = new Server
             {
                 Services = { Grpc.Contract.GrpcService.BindService(new GrpcService.Services.GrpcService()) },
-                Ports = { new ServerPort("localhost", port, ServerCredentials.Insecure) }
+                Ports = { new ServerPort(host, port, ServerCredentials.Insecure) }
             };
             server.Start();
 
