@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrpcService", "src\GrpcQueryService\GrpcService.csproj", "{347D03F7-2E41-401D-B220-1E91E2FBF907}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrpcService", "src\GrpcService\GrpcService.csproj", "{347D03F7-2E41-401D-B220-1E91E2FBF907}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Grpc.Contracts", "src\GrpcQueryService.Contract\Grpc.Contracts.csproj", "{13314898-80D1-4264-9D07-DA1596D2398C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Grpc.Contracts", "src\GrpcService.Contract\Grpc.Contracts.csproj", "{13314898-80D1-4264-9D07-DA1596D2398C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceTests", "tests\GrpcServiceTests\ServiceTests.csproj", "{BE997CE3-254B-44D2-AF84-3AD6319261D7}"
 EndProject
