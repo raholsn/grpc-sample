@@ -12,10 +12,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Rest.Contracts\Rest.Contracts.csproj" />
-    <ProjectReference Include="..\..\RestService\RestService.csproj" />
     <ProjectReference Include="..\..\src\GrpcQueryService.Contract\Grpc.Contracts.csproj" />
     <ProjectReference Include="..\..\src\GrpcQueryService\GrpcService.csproj" />
+    <ProjectReference Include="..\..\src\Rest.Contracts\Rest.Contracts.csproj" />
+    <ProjectReference Include="..\..\src\RestService\RestService.csproj" />
   </ItemGroup>
 
 </Project>
