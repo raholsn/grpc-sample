@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading;
+﻿using System.Threading;
 using System.Threading.Tasks;
 
 using AutoFixture;
@@ -10,14 +7,12 @@ using Grpc.Core;
 
 using GrpcService;
 
-namespace GrpcServiceTests
+namespace ServiceTests
 {
     public class GrpcServiceTestsBase
     {
         public static readonly Fixture Fixture = new Fixture();
-
         public readonly Grpc.Contract.GrpcService.GrpcServiceClient Client;
-
 
         public GrpcServiceTestsBase()
         {

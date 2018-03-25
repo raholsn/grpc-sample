@@ -12,7 +12,7 @@ using Grpc.Contract;
 
 using Xunit;
 
-namespace GrpcServiceTests
+namespace ServiceTests
 {
     public class GrpcServiceTests : GrpcServiceTestsBase
     {
@@ -36,7 +36,6 @@ namespace GrpcServiceTests
                 }
 
                 _sampleRequest.Should().BeEquivalentTo(result);
-
             }
         }
 
@@ -60,7 +59,6 @@ namespace GrpcServiceTests
                 }
 
                 _sampleRequest.Should().BeEquivalentTo(result);
-
             }
         }
 
@@ -71,11 +69,10 @@ namespace GrpcServiceTests
             [Fact]
             public async Task Should_return_correct_value()
             {
-                
                 using (var call = Client.GetCustomersWithBidirectionalStream())
                 {
                     var result = new ConcurrentBag<GrpcRequest>();
-                    
+
                     var read = Task.Run(async () =>
                     {
                         while (await call.ResponseStream.MoveNext(CancellationToken.None))
@@ -98,7 +95,6 @@ namespace GrpcServiceTests
                     }
                 }
             }
-
         }
     }
 }

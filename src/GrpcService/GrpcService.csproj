@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GrpcQueryService.Contract\Grpc.Contracts.csproj" />
+    <ProjectReference Include="..\GrpcService.Contract\Grpc.Contracts.csproj" />
   </ItemGroup>
 
 </Project>

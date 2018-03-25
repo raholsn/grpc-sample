@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 using Microsoft.AspNetCore.Mvc;
 
@@ -30,6 +31,8 @@ namespace RestService.Controllers
         [Route("post")]
         public RestResponse Post([FromBody] RestRequest restRequest)
         {
+            Console.WriteLine($"Recieved Post: {restRequest.Value}");
+
             return new RestResponse
             {
                 Value = restRequest.Value

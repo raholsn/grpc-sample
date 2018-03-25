@@ -12,10 +12,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\GrpcQueryService.Contract\Grpc.Contracts.csproj" />
-    <ProjectReference Include="..\..\src\GrpcQueryService\GrpcService.csproj" />
+    <ProjectReference Include="..\..\src\GrpcService.Contract\Grpc.Contracts.csproj" />
+    <ProjectReference Include="..\..\src\GrpcService\GrpcService.csproj" />
     <ProjectReference Include="..\..\src\Rest.Contracts\Rest.Contracts.csproj" />
     <ProjectReference Include="..\..\src\RestService\RestService.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Grpc.Core">
+      <HintPath>..\..\..\..\..\..\Users\raol\.nuget\packages\grpc.core\1.10.0\lib\netstandard1.5\Grpc.Core.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

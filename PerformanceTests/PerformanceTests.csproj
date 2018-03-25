@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\src\GrpcService.Contract\Grpc.Contracts.csproj" />
+    <ProjectReference Include="..\src\GrpcService\GrpcService.csproj" />
+    <ProjectReference Include="..\src\Rest.Contracts\Rest.Contracts.csproj" />
+    <ProjectReference Include="..\src\RestService\RestService.csproj" />
+  </ItemGroup>
+
+</Project>

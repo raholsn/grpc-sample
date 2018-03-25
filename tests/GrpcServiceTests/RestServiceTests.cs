@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Threading;
 using System.Threading.Tasks;
 
 using AutoFixture;
+using AutoFixture.Xunit2;
 
 using FluentAssertions;
 
@@ -21,34 +23,53 @@ namespace ServiceTests
 {
     public class RestServiceTests : RestServiceTestsBase
     {
+        public RestServiceTests()
+        {
+            HttpClient.BaseAddress = new Uri("http://localhost:5002/");
+        }
+
         public class PostMany : RestServiceTests
         {
-            private readonly IEnumerable<RestRequest> _sampleRequests = fixture.CreateMany<RestRequest>();
-            public PostMany()
+            [Theory]
+            [AutoData]
+            public async Task Should_return_correct_values(IEnumerable<RestRequest> sampleRequest)
             {
-                HttpClient.BaseAddress = new Uri("http://localhost:65290/");
-            }
+                var payload = new StringContent(JsonConvert.SerializeObject(sampleRequest));
+                payload.Headers.ContentType = new MediaTypeHeaderValue("application/json");
 
-            [Fact]
-            public async Task Should_return_correct_values()
-            {
-                var response = await HttpClient.PostAsync("api/values/postmany", new StringContent(JsonConvert.SerializeObject(_sampleRequests)));
+                var response = await HttpClient.PostAsync("api/values/postmany", payload);
 
                 var result = JsonConvert.DeserializeObject<IEnumerable<RestResponse>>(await response.Content.ReadAsStringAsync());
 
                 foreach (var restResponse in result)
                 {
-                    _sampleRequests.ToList().Should().Contain(new RestRequest { Value = restResponse.Value });
+                    sampleRequest.ToList().Should().ContainSingle(x => x.Value == restResponse.Value);
                 }
+            }
+        }
+
+        public class Post : RestServiceTests
+        {
+            [Theory]
+            [AutoData]
+            public async Task Should_return_correct_values(RestRequest sampleRequest)
+            {
+                var payload = new StringContent(JsonConvert.SerializeObject(sampleRequest));
+                payload.Headers.ContentType = new MediaTypeHeaderValue("Application/json");
+
+                var response = await HttpClient.PostAsync("api/values/post", payload);
+
+                var result = JsonConvert.DeserializeObject<RestResponse>(await response.Content.ReadAsStringAsync());
+
+                sampleRequest.Value.Should().Be(result.Value);
             }
         }
     }
 
     public class RestServiceTestsBase
     {
-
-        public HttpClient HttpClient;
         public static readonly Fixture fixture = new Fixture();
+        public HttpClient HttpClient;
 
         public RestServiceTestsBase()
         {
@@ -56,6 +77,9 @@ namespace ServiceTests
             Thread.Sleep(1000);
 
             HttpClient = new HttpClient();
+
+            HttpClient.DefaultRequestHeaders.Accept.Clear();
+            HttpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
     }
 }

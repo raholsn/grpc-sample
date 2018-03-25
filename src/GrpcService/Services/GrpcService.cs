@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 using Grpc.Contract;
 using Grpc.Core;
 
-
 namespace GrpcService.Services
 {
     public class GrpcService : Grpc.Contract.GrpcService.GrpcServiceBase
@@ -42,7 +41,6 @@ namespace GrpcService.Services
             var response = new GrpcResponses();
             while (await requestStream.MoveNext(CancellationToken.None))
             {
-
                 response.Response.Add(new GrpcResponse
                 {
                     Value = requestStream.Current.Value

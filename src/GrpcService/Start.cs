@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 
 using Grpc.Core;
 
@@ -14,7 +13,7 @@ namespace GrpcService
 
             var server = new Server
             {
-                Services = { Grpc.Contract.GrpcService.BindService(new GrpcService.Services.GrpcService()) },
+                Services = { Grpc.Contract.GrpcService.BindService(new Services.GrpcService()) },
                 Ports = { new ServerPort(host, port, ServerCredentials.Insecure) }
             };
             server.Start();
@@ -24,7 +23,6 @@ namespace GrpcService
             Console.ReadKey();
 
             server.ShutdownAsync().Wait();
-
         }
     }
 }
