@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrpcService", "src\GrpcServ
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Grpc.Contracts", "src\GrpcService.Contract\Grpc.Contracts.csproj", "{13314898-80D1-4264-9D07-DA1596D2398C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceTests", "tests\GrpcServiceTests\ServiceTests.csproj", "{BE997CE3-254B-44D2-AF84-3AD6319261D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceTests", "tests\ServiceTests\ServiceTests.csproj", "{BE997CE3-254B-44D2-AF84-3AD6319261D7}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestService", "src\RestService\RestService.csproj", "{FCA14D54-7FE4-4344-896A-184664AEA7F1}"
 EndProject
@@ -17,7 +17,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Rest", "Rest", "{F7DEAD5B-4
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rest.Contracts", "src\Rest.Contracts\Rest.Contracts.csproj", "{9EC5F5A3-7290-4F52-96FB-A80E024936B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PerformanceTests", "PerformanceTests\PerformanceTests.csproj", "{F5739BF8-30ED-4807-8E4B-1ED656362E34}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PerformanceTests", "tests\PerformanceTests\PerformanceTests.csproj", "{F5739BF8-30ED-4807-8E4B-1ED656362E34}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
